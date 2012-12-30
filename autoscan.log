@@ -1,0 +1,16 @@
+autoscan: warning: missing AC_TYPE_UINT32_T wanted by: 
+	src/libxml/xml.c:34
+	src/libxml/xml.c:34
+	src/libxml/xml.c:44
+	src/libxml/xml.c:80
+	src/libxml/xml.c:117
+	src/libxml/xml.c:173
+	src/libxml/xml.c:213
+	src/libxml/xml.c:213
+	src/libxml/xml.c:215
+	src/libxml/xml.c:311
+	src/libxml/xml.c:312
+	src/libxml/xml.c:380
+	src/libxml/xml.c:414
+	src/libxml/xml.h:27
+	src/libxml/xml.h:29
