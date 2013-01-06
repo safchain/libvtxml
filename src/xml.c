@@ -14,6 +14,7 @@
 
 #include <types.h>
 
+#include "mem.h"
 #include "xml.h"
 
 enum {
@@ -398,9 +399,16 @@ XML_CONFIG *xml_alloc_config() {
 	return NULL;
 }
 
+void xml_add_callback(XML_CONFIG *config, char *path, XML_CALLBACKS *xc) {
+	hl_hash_put(config->callbacks, path, xc, sizeof(XML_CALLBACKS));
+}
+
 void xml_free_config(XML_CONFIG *config) {
 	if (config->xpath)
 		free(config->xpath);
+
+	if (config->callbacks)
+                hl_hash_free(config->callbacks);
 
 	free(config);
 }
